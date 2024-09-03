@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'menu.dart'; // Asegúrate de tener el archivo menu.dart creado
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -32,7 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final TextEditingController _nombreUsuarioController = TextEditingController();
+  final TextEditingController _nombreUsuarioController =
+      TextEditingController();
 
   void _continuar() {
     String nombreUsuario = _nombreUsuarioController.text;
@@ -54,40 +55,42 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true, 
-        backgroundColor: Colors.transparent, 
-        elevation: 1, 
-        toolbarHeight: 120, 
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 1,
+        toolbarHeight: 120,
         title: Text(
           widget.title,
           style: const TextStyle(
-            fontFamily: 'Roboto', 
+            fontFamily: 'Roboto',
             fontWeight: FontWeight.bold,
-            fontSize: 40, 
-            color: Color(0xFF264653), 
+            fontSize: 40,
+            color: Color(0xFF264653),
           ),
         ),
-        flexibleSpace: Container( 
+        flexibleSpace: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient( 
+            gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: <Color>[
-                Colors.white, 
-                Colors.white, 
+                Colors.white,
+                Colors.white,
               ],
             ),
           ),
         ),
       ),
-      body: SingleChildScrollView( // Envolvemos el contenido en un SingleChildScrollView
+      body: SingleChildScrollView(
+        // Envolvemos el contenido en un SingleChildScrollView
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox( // Limitamos el tamaño de la imagen
+                SizedBox(
+                  // Limitamos el tamaño de la imagen
                   height: 200, // Ajusta la altura según sea necesario
                   child: Image.asset(
                     'assets/señor.png',
@@ -99,19 +102,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   'AgriConsult la solución inteligente para el cuidado de tus plantas.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 18,
-                    fontStyle: FontStyle.italic, 
-                    color: Color(0xFF264653), 
-                    fontWeight: FontWeight.bold
-                  ),
+                      fontSize: 18,
+                      fontStyle: FontStyle.italic,
+                      color: Color(0xFF264653),
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'Dime tu nombre para continuar',
+                  'Ingresa tu nombre para continuar',
                   style: TextStyle(
                     fontSize: 16,
-                    fontStyle: FontStyle.italic, 
-                    color: Color(0xFF264653), 
+                    fontStyle: FontStyle.italic,
+                    color: Color(0xFF264653),
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -123,7 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderSide: BorderSide(color: Colors.grey),
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color.fromARGB(255, 75, 255, 47)),
+                      borderSide:
+                          BorderSide(color: Color.fromARGB(255, 75, 255, 47)),
                     ),
                     border: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey),
@@ -135,11 +138,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: _continuar,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(217, 217, 217, 100),
-                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-                    textStyle: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 80, vertical: 15),
+                    textStyle: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   child: const Text(
                     'CONTINUAR',
+
+                    ///
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
