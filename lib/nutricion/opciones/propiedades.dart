@@ -169,21 +169,26 @@ class _PropiedadesState extends State<Propiedades> {
     if (cultivoSize == 0) return '';
 
     double factor = 0;
+    double cantidad = 0;
     String producto = '';
+    
     switch (selectedPlaga) {
       case 'Capacidad de Intercambio Catiónico':
         factor = 0.32;
+        cantidad = 0.002;
         producto = 'Compost';
         break;
       case 'pH del suelo':
         factor = 0.45;
+        cantidad = 0.0165;
         producto = 'Caliza';
         break;
       case 'Contenido de materia orgánica':
         factor = 0.15;
+        cantidad = 0.002;
         producto = 'Residuos vegetales';
         break;
     }
-    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos.';
+    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos, disueltos en ${cultivoSize * cantidad} litros de agua.';
   }
 }
