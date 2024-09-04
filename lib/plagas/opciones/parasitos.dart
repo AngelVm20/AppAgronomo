@@ -1,4 +1,3 @@
-//Fusionando cambios de la rama master para incluir la nueva funcionalidad de búsqueda. Resuelve el issue #123.
 import 'package:flutter/material.dart';
 
 class Parasitos extends StatefulWidget {
