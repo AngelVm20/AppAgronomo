@@ -167,7 +167,6 @@ class _ParasitosState extends State<Parasitos> {
 
   String _getCalculo() {
     if (cultivoSize == 0) return '';
-
     double factor = 0;
     String producto = '';
     switch (selectedPlaga) {
