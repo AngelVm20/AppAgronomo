@@ -169,20 +169,24 @@ class _ParasitosState extends State<Parasitos> {
     if (cultivoSize == 0) return '';
     double factor = 0;
     String producto = '';
+    double cantidad = 0;
     switch (selectedPlaga) {
       case 'Nematodos':
         factor = 0.32;
+        cantidad = 0.006;
         producto = 'Nematicidas';
         break;
       case ' Áfidos':
         factor = 0.45;
+        cantidad = 0.005
         producto = 'Pirimicarb';
         break;
       case 'Araña Roja':
         factor = 0.15;
+        cantidad = 0.001;
         producto = 'Acaricidas';
         break;
     }
-    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos.';
+    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos, disueltos en ${cultivoSize * cantidad} litros de agua.';
   }
 }
