@@ -170,20 +170,24 @@ class _EnfermedadesState extends State<Enfermedades> {
 
     double factor = 0;
     String producto = '';
+    double cantidad = 0;
     switch (selectedPlaga) {
       case 'Oidio':
         factor = 0.32;
+        cantidad = 0.01;
         producto = 'Azufre';
         break;
       case 'Mildiu':
         factor = 0.45;
+        cantidad = 0.008;
         producto = 'Mancozeb';
         break;
       case 'Roya':
         factor = 0.15;
+        cantidad = 0.006;
         producto = 'Triazoles';
         break;
     }
-    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos.';
+    return 'Para tu dimensión de cultivos debes fumigar con $producto, usando ${cultivoSize * factor} milímetros cúbicos, diluidos en ${cultivoSize * cantidad} de litros de agua';
   }
 }
