@@ -12,7 +12,6 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(38, 125, 153, 1),
         automaticallyImplyLeading: false,
@@ -40,7 +39,8 @@ class MenuPage extends StatelessWidget {
             onPressed: () {
               _mostrarDialogoSalida(context);
             },
-            child: Row( // Contenido del botón (texto e icono)
+            child: Row(
+              // Contenido del botón (texto e icono)
               mainAxisSize: MainAxisSize.min,
               children: const [
                 Text(
@@ -73,7 +73,8 @@ class MenuPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start, // Alinea el texto al inicio (izquierda)
+              crossAxisAlignment: CrossAxisAlignment
+                  .start, // Alinea el texto al inicio (izquierda)
               children: <Widget>[
                 const SizedBox(height: 40),
                 const Center(
@@ -82,55 +83,65 @@ class MenuPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18, // Tamaño de fuente adaptable
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 34, 35, 32), // Color de texto
+                      color: Color.fromARGB(255, 238, 13, 6), // Color de texto
                     ),
                   ),
                 ),
-                const SizedBox(height: 150), // Espacio entre el texto y los botones
+                const SizedBox(
+                    height: 150), // Espacio entre el texto y los botones
                 Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push( // Usamos Navigator.push para navegar
+                          Navigator.push(
+                            // Usamos Navigator.push para navegar
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const PlagasPage(), // Asegúrate de usar 'const' aquí también
+                              builder: (context) =>
+                                  const PlagasPage(), // Asegúrate de usar 'const' aquí también
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromRGBO(217, 217, 217, 100),
-                          padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                          backgroundColor:
+                              const Color.fromRGBO(217, 217, 217, 100),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 80, vertical: 15),
                           textStyle: const TextStyle(fontSize: 18),
                         ),
                         child: const Text(
                           'AGENTES BIÓTICOS',
-                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                       ),
                       const SizedBox(height: 50),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push( // Usamos Navigator.push para navegar
+                          Navigator.push(
+                            // Usamos Navigator.push para navegar
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const NutricionPage(), // Asegúrate de usar 'const' aquí también
+                              builder: (context) =>
+                                  const NutricionPage(), // Asegúrate de usar 'const' aquí también
                             ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromRGBO(217, 217, 217, 100),
-                          padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-                          textStyle: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                          backgroundColor:
+                              const Color.fromRGBO(217, 217, 217, 100),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 80, vertical: 15),
+                          textStyle: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                         child: const Text(
                           'NUTRICIÓN VEGETAL',
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
-                      
                     ],
                   ),
                 ),
