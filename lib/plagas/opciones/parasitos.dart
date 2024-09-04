@@ -151,7 +151,6 @@ class _ParasitosState extends State<Parasitos> {
     );
   }
   
-
   String _getRecomendacion() {
     switch (selectedPlaga) {
       case 'Nematodos':
