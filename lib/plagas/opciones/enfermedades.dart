@@ -65,7 +65,8 @@ class _EnfermedadesState extends State<Enfermedades> {
                             // Mostrar un mensaje de error o realizar otra acción
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('Por favor, selecciona una enfermedad'),
+                                content: Text(
+                                    'Por favor, selecciona una enfermedad'),
                               ),
                             );
                           }
@@ -133,10 +134,10 @@ class _EnfermedadesState extends State<Enfermedades> {
       child: Text(
         _getRecomendacion(),
         style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-        
       ),
     );
   }
+
   Widget _buildRecomendacionContainerCalculo() {
     return Container(
       padding: const EdgeInsets.all(16.0),
@@ -150,7 +151,6 @@ class _EnfermedadesState extends State<Enfermedades> {
       ),
     );
   }
-  
 
   String _getRecomendacion() {
     switch (selectedPlaga) {
